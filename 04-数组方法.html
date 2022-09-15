@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        // 静态成员方法：将伪数组转换为真数组
+        // Array.from();
+
+        // 伪数组：长得像数组，也可以通过for循环遍历数组。但是不能使用数组中的方法
+        // 真数组：既可以使用for循环遍历，还可以使用提供的方法。
+        let lis = document.querySelectorAll('li');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        lis = Array.from(lis);
+        lis.push();
+        console.log(lis.values());
+    </script>
+</body>
+</html>
