@@ -10,7 +10,22 @@
     <script>
         // 继承原型继承：
 
-        // 继承的作用：
+        // 继承的作用：减少重复代码。
+
+        // 代码演示：
+        function F(uname){
+            this.uname = uname;
+        }
+        F.prototype.eat = function(){
+            console.log("吃饭中");
+        }
+        function S(uname){
+            this.uname = uname;
+        }
+        // 假继承：儿子设置的方法，父亲也会拥有，本质上没有严格按照原型链的规则去找方法
+        S.prototype = F.prototype
+        let zs = new S('张三')
+        zs.eat()
     </script>
 </body>
 </html>
