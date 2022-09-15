@@ -7,11 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+    <p></p>
     <script>
         // 需求：将对象中的值取出然后拼接字符串显示到对应的标签中
         const spec = {size:'40cm*40cm',color:'黑色'};
-        let res = spec.keys()
-        console.log(res);
+        // 1.先得到对象中的值
+        // spec.seze + '/' +spec.color
+        let ary = Object.values(spec).join('/')
+        document.querySelector('p').innerHTML  = ary;//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
     </script>
 </body>
 </html>
