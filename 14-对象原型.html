@@ -8,13 +8,20 @@
 </head>
 <body>
     <script>
-        // 对象原型：
+        // 原型对象：（prototype)是构造函数身上的一个属性，作用时用来设置公共方法（减少 内存浪费）
+        // 对象原型：（__proto__)
         // 概念： 对象原型(__proto__),是构造函数创建的实例对象身上的一个属性
 
-        function  People(){
+
+        function  People(uname){
             this.uname = uname;
         }
-        
+        //张三就是通过构造函数创建的一个实例对象
+        let zs = new People('张三');
+        // 注意：在浏览器中看到的结果[[prototype]]就是__proto__的另外一种表现
+        // console.dir(zs);
+
+        console.log(zs.__proto__);
     </script>
 </body>
 </html>
