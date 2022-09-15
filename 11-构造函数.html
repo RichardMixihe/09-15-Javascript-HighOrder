@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 构造函数的作用是：创建对象
+        // 如何通过构造函数创建对象：new + 构造函数（）
+        // 构造函数中的成员： 实例成员 + 静态成员；
+        // 实例成员：在构造函数内部通过this关键字设置的属性+方法
+        // 静态成员：通过构造函数直接设置的属性 + 方法
+        // 构造函数中的this：指向构造函数创建的对象；
+
+
+        // 构造函数创建对象时候的一些问题：
+
+        function People(uname){
+            this.uname = uname;
+            this.eat = function(){
+                console.log('正在吃饭');
+            }
+        }
+        let zs = new People('章三')
+        let ls = new People('李四')
+    </script>
+</body>
+</html>
