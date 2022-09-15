@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 作用域链：用来查找变量规则（就近原则）沿着作用域链想上一级查找
+
+        // 原型链：用来查找方法的规则（就近原则）沿着原型链向上一级查找
+
+
+        // 代码演示
+        function People(age){
+            this.age = 12;
+        }
+        let zs = new People()
+        console.log(zs.age.toString());
+    </script>
+</body>
+</html>
