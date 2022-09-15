@@ -149,7 +149,20 @@
     ]
 
       // 1.根据已有的数据进行数据渲染（创建标签）
-      
+    let res = goodsList.map(item =>{
+      return `
+          <div class="item">
+          <img src="https://yanxuan-item.nosdn.127.net/84a59ff9c58a77032564e61f716846d6.jpg" alt="">
+          <p class="name">称心如意手摇咖啡磨豆机咖啡豆研磨机 <span class="tag">【赠品】10优惠券</span></p>
+          <p class="spec">白色/10寸</p>
+          <p class="price">289.90</p>
+          <p class="count">x2</p>
+          <p class="sub-total">579.80</p>
+        </div>
+      `
+    }).join('')
+
+    document.querySelector('.list').innerHTML = res;//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
   </script>
 </body>
 </html>
