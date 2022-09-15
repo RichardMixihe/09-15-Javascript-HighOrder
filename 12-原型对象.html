@@ -26,6 +26,27 @@
         //如何通过原型对象为构造函数设置公共方法？
         // 语法： 构造函数.prototype.方法名 = function(){}
         
+
+        // 代码演示
+            // function People(uname){
+            //         this.uname = uname;
+            //     }
+
+            // People.prototype.eat = function(){
+            //     console.log('吃饭');
+            // }
+            // let zs = new People('章三');
+            // let ls = new People('李四');
+            // zs.eat();
+            // ls.eat();
+            // console.log(zs.eat === ls.eat);
+            // People.prototype.sleep = function(){
+            //     console.log('会睡觉');
+            // }
+            // zs.sleep()
+            // ls.sleep()
+
+                原型对象公共方法中可以使用this关键字
     </script>
 </body>
 </html>
