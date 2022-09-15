@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <span></span>
+        <br>
+        <span></span>
+    </p>
+    <script>
+        const gift = '50g茶叶,清洗球'
+        // 根据字符串内容在页面中创建标签并显示对应的内容
+        // console.log( gift.split(','));
+        document.querySelectorAll('p span')[0].innerHTML = gift.split(',')[0];//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        document.querySelectorAll('p span')[1].innerHTML = gift.split(',')[1];//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+    </script>
+</body>
+</html>
