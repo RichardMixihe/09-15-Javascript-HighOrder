@@ -17,9 +17,14 @@
         function S(uname){
             this.uname = uname;
         }
+
         S.prototype = new F();
+        console.log(S.prototype.constructor);
+        //将自己的构造函数改回来
+        S.prototype.constructor = S
+        console.log(S.prototype.constructor);
         let zs = new S('张三')
-        zs.eat();
+        // zs.eat();
     </script>
 </body>
 </html>
