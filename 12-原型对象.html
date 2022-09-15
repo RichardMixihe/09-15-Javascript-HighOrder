@@ -8,7 +8,19 @@
 </head>
 <body>
     <script>
-        
+        // 原型对象的作用：
+        // 1.通过原型对象设置的方法才是真正的方法
+        // 2.减少内存浪费的问题
+
+        // 什么是原型对象？
+        // 原型对象：prototype，原型对象（prototype)是构造函数身上的一个属性
+
+        // prototype本质也是一个对象
+        // 代码演示
+        function People(uname){
+            this.uname = uname;
+        }
+        console.dir(People.prototype)
     </script>
 </body>
 </html>
