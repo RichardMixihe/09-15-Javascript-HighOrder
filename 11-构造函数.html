@@ -26,6 +26,15 @@
         }
         let zs = new People('章三')
         let ls = new People('李四')
+
+        zs.eat()
+        ls.eat()
+        // zs对象身上的eat方法和ls对象身上的eat方法是同一个么？证明zs.eat==ls.eat
+        console.log(zs.eat === la.eat);
+        // 为什么构造函数中的方法不是同一个方法了
+        // 因为通过构造函数创建对象的时候，在堆中出现了多个不一样的内存地址1
+        // 不是同一个方法，在程序中就会出现浪费内存（内存溢出
+
     </script>
 </body>
 </html>
