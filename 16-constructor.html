@@ -8,7 +8,18 @@
 </head>
 <body>
     <script>
-        
+        function People(uname){
+            this.uname = uname;
+        }
+        // constructor:构造函数  constructor是原型对象和对象原型中的一个属性
+
+        // 代码演示：
+        console.log(People.prototype.constructor);
+
+        let zs = new People('张三')
+        console.log(zs.__proto__.constructor); 
+
+        // constructor作用：记录了当前对象属于那个构造函数（类似于人身体内的DNA）
     </script>
 </body>
 </html>
