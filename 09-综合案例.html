@@ -150,19 +150,29 @@
 
       // 1.根据已有的数据进行数据渲染（创建标签）
     let res = goodsList.map(item =>{
+      // 定义一个变量保存赠品信息
+      let gift_str = '';
+      gift_str = item.gift ? item.gift.split(',').map(items =>{return `<span class="tag">【赠品】${items}</span>`}).join(""):'' ;
       return `
           <div class="item">
-          <img src="https://yanxuan-item.nosdn.127.net/84a59ff9c58a77032564e61f716846d6.jpg" alt="">
-          <p class="name">称心如意手摇咖啡磨豆机咖啡豆研磨机 <span class="tag">【赠品】10优惠券</span></p>
-          <p class="spec">白色/10寸</p>
-          <p class="price">289.90</p>
-          <p class="count">x2</p>
-          <p class="sub-total">579.80</p>
+          <img src="${item.picture}" alt="">
+          <p class="name">${item.name}${gift_str}<span class="tag">【赠品】10优惠券</span></p>
+          <p class="spec">${Object.values(item.spec).join('/')}</p>
+          <p class="price">${item.price.toFixed(2)}</p>
+          <p class="count">${item.count}</p>
+          <p class="sub-total">${(item.price*item.count).toFixed(2)}</p>
         </div>
       `
     }).join('')
 
     document.querySelector('.list').innerHTML = res;//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+
+
+    // 计算总价格：将提供的数据价格累加求和
+    document.querySelector('.amount').innerHTML = goodsList.reduce(function(sum,item){
+      return sum += item.price * item.count;
+    },0).toFixed(2)
+
   </script>
 </body>
 </html>
